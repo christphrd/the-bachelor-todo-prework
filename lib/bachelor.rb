@@ -23,11 +23,29 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  counter = 0
+  data.each do |season,data_array|
+    data_array.each do |person_info|
+      person_info.each do |k,v|
+        if v == hometown
+          counter += 1
+        end
+      end
+    end
+  end
+  counter
 end
 
 def get_occupation(data, hometown)
-  # code here
+  data.each do |season,data_array|
+    data_array.each do |person_info|
+      person_info.each do |k,v|
+        if v == hometown
+          return person_info["occupation"]
+        end
+      end
+    end
+  end
 end
 
 def get_average_age_for_season(data, season)
