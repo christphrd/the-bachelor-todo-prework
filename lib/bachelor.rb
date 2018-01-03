@@ -53,5 +53,5 @@ def get_average_age_for_season(data, season)
   data[season].each do |hash_array|
     counter = counter + hash_array["age"].to_i
   end
-  counter / data[season].length
+  (counter.to_f / data[season].length.to_f).round
 end
