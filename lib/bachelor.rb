@@ -1,5 +1,7 @@
 def get_first_name_of_season_winner(data, season)
+  binding.pry
   data[season].each do |hash_array|
+    binding.pry
     hash_array.each do |element|
       if v == "Winner"
         nil
