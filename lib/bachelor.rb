@@ -1,5 +1,11 @@
 def get_first_name_of_season_winner(data, season)
-  season_string = "Season #{season}"
+  data[season].each do |hash_array|
+    hash_array.each do |element|
+      if v == "Winner"
+        nil
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
